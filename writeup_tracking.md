@@ -27,7 +27,7 @@ This task involves extracting two data channels, "range" and "intensity," from t
 The following Image illustrates the RMSE for single tracking: 
 
 
-<img src="img/doc/tracking/rmse.PNG"  width="1000" height="1000">
+<img src="img/doc/tracking/rmse.PNG"  width="1000" height="700">
 
 # Step 2: Track Management
 
@@ -35,8 +35,8 @@ In this step track management is implemeneted, so that tracks can be initialized
 
 The visualization demonstrates the automatic initialization of a new track at the location of unassigned measurements, quick confirmation of the true track, and deletion of the track when it is no longer visible.The `RMSE` plot displays a single line since there is only one track with no losses.
 
-<img src="img/doc/tracking/rmse2.PNG" width="1000" height="1000">
-<img src="img/doc/tracking/tracking1.PNG"  width="1000" height="1000">
+<img src="img/doc/tracking/rmse2.PNG" width="1000" height="700">
+<img src="img/doc/tracking/tracking1.PNG"  width="1000" height="700">
 
 # Step 3: Data Association
 In this step a *single nearest neighbor* data association is implemented to associate measurements to tracks.
@@ -49,14 +49,14 @@ The following steps are taken to associate tracks with measurements:
 - The pair with the smallest Mahalanobis distance is selected, the Kalman filter is updated, and the corresponding row and column in the association matrix are deleted.
 - A measurement is considered to belong to a track if the Mahalanobis distance is less than the threshold obtained from the inverse cumulative chi-squared distribution.
 
-<img src="img/doc/tracking/step3_tracking.PNG"  width="1000" height="1000">
+<img src="img/doc/tracking/step3_tracking.PNG"  width="1000" height="700">
 
 
 # Step 4: Camera Sensor fusion
 
 In this step the nonlinear camera measurement model is implemented. The camera-lidar fusion can be now performed..
 The tracking loop now updates all tracks with lidar measurements, then with camera measurements. The console output shows lidar updates followed by camera updates. The visualization shows that the tracking performs well. The `RSME` plot shows that track 0 are tracked from beginning to end of the sequence without track loss. The mean `RMSE` for these two tracks is be below 0.25.
-<img src="img/doc/tracking/step4_rmse.PNG"  width="1000" height="1000">
+<img src="img/doc/tracking/step4_rmse.PNG"  width="1000" height="700">
 
 # Conclusion: 
 In this project there were four main tracking steps, which are as follows:
