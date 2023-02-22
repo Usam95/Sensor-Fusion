@@ -107,7 +107,7 @@ class Filter:
         # END student code
         ############ 
 
-    def S(self, track, meas, H):
+    def S(self, track, measadde, H):
         ############
         # TODO Step 1: calculate and return covariance of residual S
         ############
