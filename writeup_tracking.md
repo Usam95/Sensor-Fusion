@@ -58,6 +58,8 @@ In this step the nonlinear camera measurement model is implemented. The camera-l
 The tracking loop now updates all tracks with lidar measurements, then with camera measurements. The console output shows lidar updates followed by camera updates. The visualization shows that the tracking performs well. The `RSME` plot shows that track 0 are tracked from beginning to end of the sequence without track loss. The mean `RMSE` for these two tracks is be below 0.25.
 <img src="img/doc/tracking/step4_rmse.PNG"  width="1000" height="1000">
 
+A video showing the results of the tracking algorithm is available for review. You can find the video file at the location `img/my_tracking_results.avi`. 
+
 # Conclusion: 
 In this project there were four main tracking steps, which are as follows:
 
